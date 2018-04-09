@@ -1,0 +1,130 @@
+{
+  "contactInformation": {
+    "email": "arya.stark@winterfell.gov",
+    "contactMethod": "MAIL",
+    "preferredLanguage": "EN"
+  },
+  "payment": {
+    "pointsTotalBaseFare": {
+      "amount": "11,128",
+      "currencyCode": "PTS"
+    },
+    "moneyTotalFare": {
+      "amount": "11.20",
+      "currencyCode": "USD"
+    },
+    "savedCreditCard": null,
+    "newCreditCard": {
+      "billingContactInfo": {
+        "firstName": "Arya",
+        "lastName": "Stark",
+        "address": {
+          "addressLine1": "110 Stark Road",
+          "addressLine2": null,
+          "city": "Winterfell",
+          "stateProvinceRegion": "GA",
+          "zipOrPostalCode": "11234",
+          "isoCountryCode": "US"
+        },
+        "phoneNumber": "15354664664"
+      },
+      "creditCardType": "AMEX",
+      "cardNumber": "371449635068431",
+      "expiration": "2019-01"
+    }
+  },
+  "receiptEmail": "arya.stark@winterfell.gov",
+  "reservationGroups": [
+    {
+      "passengerType": "ADULT",
+      "amountApplied": {
+        "totalBaseFare": {
+          "amount": "5,564",
+          "currencyCode": "PTS",
+          "currencySymbol": "$"
+        },
+        "taxesAndFees": [
+          {
+            "code": "US",
+            "description": "Excise Taxes",
+            "fee": {
+              "amount": "0.00",
+              "currencyCode": "USD",
+              "currencySymbol": "$"
+            }
+          },
+          {
+            "code": "AY",
+            "description": "Sept 11 Security Fee",
+            "fee": {
+              "amount": "5.60",
+              "currencyCode": "USD",
+              "currencySymbol": "$"
+            }
+          }
+        ]
+      },
+      "productIds": [
+        "eyJwcm9kdWN0SWQiOiJXR0FSRUR8RkZQfE5GRixOLEFUTCxIT1UsMjAxOC0wNS0xNVQwNjowMC0wNDowMCwyMDE4LTA1LTE1VDA3OjEwLTA1OjAwLFdOLFdOLDE1Myw3M1ciLCJxdW90ZWRQcmljZSI6IjU1NjQiLCJpbnRlcm5hdGlvbmFsIjpmYWxzZSwiZmFyZVR5cGUiOiJXR0FSRUQiLCJmYXJlUHJpY2luZ1R5cGUiOiJQT0lOVFMifQ=="
+      ],
+      "passengers": [
+        {
+          "passengerReference": "1",
+          "name": {
+            "firstName": "Arya",
+            "lastName": "Stark"
+          },
+          "dateOfBirth": "1991-11-01",
+          "gender": "F",
+          "passengerType": "ADULT",
+          "emergencyContact": {
+            "emergencyContactInformation": {
+              "contactPhone": {
+                "countryCode": "US",
+                "number": "259985555511"
+              },
+              "name": "Amber Awesome"
+            }
+          },
+          "passportInformation": {
+            "countryOfResidence": "US",
+            "nationality": "US",
+            "passportExpirationDate": "2019-10-09",
+            "passportIssuedBy": "US",
+            "passportNumber": "123123123123123"
+          }
+        },
+        {
+          "passengerReference": "2",
+          "name": {
+            "firstName": "Arya",
+            "middleName":"XS",
+            "lastName": "Stark"
+          },
+          "dateOfBirth": "1991-11-01",
+          "gender": "F",
+          "passengerType": "ADULT",
+          "emergencyContact": {
+            "emergencyContactInformation": {
+              "contactPhone": {
+                "countryCode": "US",
+                "number": "259985555511"
+              },
+              "name": "Amber Awesome"
+            }
+          },
+          "passportInformation": {
+            "countryOfResidence": "US",
+            "nationality": "US",
+            "passportExpirationDate": "2019-10-09",
+            "passportIssuedBy": "US",
+            "passportNumber": "123123123123123"
+          }
+        }
+      ]
+    }
+  ],
+  "earlyBird": null,
+  "purposeOfTravel": null,
+  "sharedItineraryEmail": "brandon.stark@winterfell.gov"
+}
