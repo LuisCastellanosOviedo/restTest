@@ -4,6 +4,7 @@ package com.restesting.restesting.flowManager.stepServices;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.restesting.restesting.flowManager.stepServices.entity.FlowStep;
 import com.restesting.restesting.flowManager.stepServices.executor.StepExecutor;
+import com.restesting.restesting.setupTools.GlobalSetup;
 import com.restesting.restesting.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,15 +13,12 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
+
+import static com.restesting.restesting.constant.IConstants.URL_F_LOWS;
 
 @Component
 public class StepFlowService {
 
-
-
-   // public static final String MAIN_URL = "src/main/resources/static";
-   public static final String MAIN_URL = "/home/developer/Flows";
 
 
     @Autowired
@@ -62,7 +60,7 @@ public class StepFlowService {
     }
 
     private String createUrlStep(String flowName, int stepNumber) {
-        return MAIN_URL + "/"+flowName+"/step"+stepNumber;
+        return GlobalSetup.getInstace().getParameter(URL_F_LOWS)+ "/"+flowName+"/step"+stepNumber;
     }
 
 

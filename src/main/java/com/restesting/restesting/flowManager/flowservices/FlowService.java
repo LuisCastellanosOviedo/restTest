@@ -4,6 +4,7 @@ package com.restesting.restesting.flowManager.flowservices;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.restesting.restesting.flowManager.stepServices.StepFlowService;
 import com.restesting.restesting.flowManager.stepServices.entity.FlowStep;
+import com.restesting.restesting.setupTools.GlobalSetup;
 import com.restesting.restesting.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,10 +17,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static com.restesting.restesting.constant.IConstants.URL_F_LOWS;
+
 @Component
 public class FlowService {
 
-    public static final String MAIN_URL = "/home/developer/Flows";
 
 
     @Autowired
@@ -30,7 +32,7 @@ public class FlowService {
 
 
     public  List<String> loadFlowList() throws IOException {
-        String flows = jsonUtils.readJsonConf(MAIN_URL+"/flows.json");
+        String flows = jsonUtils.readJsonConf(GlobalSetup.getInstace().getParameter(URL_F_LOWS)+"/flows.json");
         JsonNode jsonNode = jsonUtils.getJsonNode(flows);
         return jsonUtils.getValuesAsMap(jsonNode).values().stream().collect(Collectors.toList());
     }
@@ -46,7 +48,7 @@ public class FlowService {
 
     private int  getStepsByFlowName(String flowName) throws IOException {
         int count = 0;
-        try (Stream<Path> files = Files.list(Paths.get(MAIN_URL+"/"+flowName))) {
+        try (Stream<Path> files = Files.list(Paths.get(GlobalSetup.getInstace().getParameter(URL_F_LOWS)+"/"+flowName))) {
              count = (int) files.count();
         }
         return count;

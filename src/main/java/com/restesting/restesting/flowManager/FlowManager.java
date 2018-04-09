@@ -17,8 +17,8 @@ public class FlowManager {
 
 
     public void executeFlows() throws IOException {
-        List<String> flows = flowService.loadFlowList();
 
+        List<String> flows = flowService.loadFlowList();
 
 
         flows.stream().forEach( f -> {
