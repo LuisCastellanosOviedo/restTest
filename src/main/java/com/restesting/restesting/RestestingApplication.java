@@ -22,7 +22,7 @@ public class RestestingApplication  implements CommandLineRunner {
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestestingApplication.class, args);
+		SpringApplication.run(RestestingApplication.class, args).close();
 	}
 
 

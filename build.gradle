@@ -35,8 +35,10 @@ dependencies {
 }
 
 
-task(runMain, dependsOn: 'classes', type: JavaExec) {
-	main = 'com.restesting.restesting.RestestingApplicationTests'
-	classpath = sourceSets.main.runtimeClasspath
-	jvmArgs = ["-Xdebug", "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"]
+
+def urlFile = project.hasProperty("urlFile")?property("urlFile"):""
+
+
+bootRun {
+	args = [urlFile]
 }

@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 @Component
 public class FlowService {
 
-    public static final String MAIN_URL = "src/main/resources/static";
+    public static final String MAIN_URL = "/home/developer/Flows";
 
 
     @Autowired
@@ -39,7 +39,7 @@ public class FlowService {
     public void executeFlow(String flowName) throws Exception {
       int steps =   getStepsByFlowName(flowName);
         for (int i = 1; i <= steps ; i++) {
-          FlowStep step =  stepFlowService.loadFlowStep(flowName,i);
+          FlowStep step =  stepFlowService.createStepFlowEntity(flowName,i);
           stepFlowService.executeStep(step);
         }
     }

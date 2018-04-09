@@ -18,11 +18,13 @@ public class StepExecutor {
     VerbStrategy verbStrategy;
 
     public  void executeStep(FlowStep flowStep) throws Exception {
-
-
         flowStep= executeRest(flowStep);
+        applyValidationsToRequest(flowStep);
+    }
 
 
+
+    private void applyValidationsToRequest(FlowStep flowStep) throws Exception {
         CodeValidationProcessor codeValidationProcessor = new CodeValidationProcessor();
         CodeTextValidationProcessor codeTextValidationProcessor = new CodeTextValidationProcessor();
         BodyEqualValidationProcessor bodyEqualValidationProcessor = new BodyEqualValidationProcessor();
@@ -31,9 +33,6 @@ public class StepExecutor {
         codeValidationProcessor.setNext(codeTextValidationProcessor);
         codeTextValidationProcessor.setNext(bodyEqualValidationProcessor);
         codeValidationProcessor.handle(flowStep);
-
-
-
     }
 
     private FlowStep executeRest(FlowStep flowStep) {
